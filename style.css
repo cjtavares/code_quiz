@@ -1,0 +1,20 @@
+p{
+    width: 30%;
+    font-size: 150%;
+}
+button{
+    background-color: rgb(102, 7, 102);
+    color: white;
+    border-radius: 15%; 
+    display: flex;   
+    margin: 6px;
+}
+
+button:hover{
+    background-color: blueviolet;
+    
+}
+
+button:sel{
+
+}
