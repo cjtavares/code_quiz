@@ -1,6 +1,6 @@
 var questions = ["Commonly used data types do not include:", "The condition in a if/else statment in enclosed within __________.", "Arrays in JavaScript can be used to store __________.", "String vales must be inclosed within ________ when being assined to variables.", "A very useful tool used during development and debugging for printing content to the debugger is:"];
 
-console.log(questions[0]);
+// console.log(questions[0]);
 
 var start = document.getElementById("startQuiz");
 start.addEventListener("click", setTime);
@@ -60,14 +60,17 @@ ans3.textContent = (question1.answer3);
 ans4.textContent = (question1.answer4);
 var question1Buttons = document.getElementById("answer1");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
+
 question1Buttons.addEventListener("click", showQuest2());
 });
+question1Buttons.addEventListener("click", showQuest2());
+
 var question1Buttons = document.getElementById("answer2");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest2());
 });
 var question1Buttons = document.getElementById("answer3");
@@ -76,8 +79,8 @@ question1Buttons.addEventListener("click", showQuest2());
 });
 var question1Buttons = document.getElementById("answer4");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest2());
 });
 }
@@ -106,14 +109,14 @@ ans3.textContent = (question2.answer3);
 ans4.textContent = (question2.answer4);
 var question1Buttons = document.getElementById("answer1");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest3());
 });
 var question1Buttons = document.getElementById("answer2");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest3());
 });
 var question1Buttons = document.getElementById("answer3");
@@ -122,8 +125,8 @@ question1Buttons.addEventListener("click", showQuest3());
 });
 var question1Buttons = document.getElementById("answer4");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest3());
 });
 }
@@ -136,8 +139,8 @@ var question3 = {
     answer4: "All of the above",
     answer1Check: false,
     answer2Check: false,
-    answer3Check: true,
-    answer4Check: false,
+    answer3Check: false,
+    answer4Check: true,
 }
 
 function showQuest3(){
@@ -153,24 +156,24 @@ ans3.textContent = (question3.answer3);
 ans4.textContent = (question3.answer4);
 var question1Buttons = document.getElementById("answer1");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest4());
 });
 var question1Buttons = document.getElementById("answer2");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest4());
 });
 var question1Buttons = document.getElementById("answer3");
 question1Buttons.addEventListener("click", function(){
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest4());
 });
 var question1Buttons = document.getElementById("answer4");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest4());
 });
 }
@@ -199,14 +202,14 @@ ans3.textContent = (question4.answer3);
 ans4.textContent = (question4.answer4);
 var question1Buttons = document.getElementById("answer1");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest5());
 });
 var question1Buttons = document.getElementById("answer2");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest5());
 });
 var question1Buttons = document.getElementById("answer3");
@@ -215,8 +218,8 @@ question1Buttons.addEventListener("click", showQuest5());
 });
 var question1Buttons = document.getElementById("answer4");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest5());
 });
 }
@@ -238,35 +241,35 @@ var ans1 = document.getElementById("answer1");
 var ans2 = document.getElementById("answer2");
 var ans3 = document.getElementById("answer3");
 var ans4 = document.getElementById("answer4");        
-quest.textContent = (questions[2]);
+quest.textContent = (questions[4]);
 ans1.textContent = (question5.answer1);
 ans2.textContent = (question5.answer2);
 ans3.textContent = (question5.answer3);
 ans4.textContent = (question5.answer4);
 var question1Buttons = document.getElementById("answer1");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest4());
 });
 var question1Buttons = document.getElementById("answer2");
 question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest4());
 });
 var question1Buttons = document.getElementById("answer3");
 question1Buttons.addEventListener("click", function(){
+    // if (secondsLeft > 0)
+    // secondsLeft = secondsLeft - 10;
 question1Buttons.addEventListener("click", showQuest4());
 });
 var question1Buttons = document.getElementById("answer4");
-question1Buttons.addEventListener("click", function(){
-    if (secondsLeft > 0)
-    secondsLeft - 10;
+question1Buttons.addEventListener("click", function(){   
 question1Buttons.addEventListener("click", showQuest4());
 });
 }
 
 function scorePage(){
-    
+
 }
