@@ -15,6 +15,18 @@ button:hover{
     
 }
 
-button:sel{
+#scoreP{
+    display:none;
+}
 
+.button-container{
+    display:none;
+}
+
+#leaderBoard{
+    display:none;
+}
+
+#zero-timer{
+    display: none;
 }

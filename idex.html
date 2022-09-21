@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz Chalange</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="/script2.js"></script>
+    <script defer src="/script3.js"></script>
 </head>
 <body>
     <header id="timer"></header>
@@ -17,16 +17,31 @@
         </p>
         <button id="startQuiz">Start Quiz</button>
     </section>
-    <section>
-        
+    <section id="questionBlock">
         <h1 id="question"> </h1>
-        <button id =answer1></button>
-        <button id="answer2"></button>
-        <button id="answer3"></button>
-        <button id="answer4"></button>
+        <div class="button-container">
+            <button class="btn" id = "answer1"></button>
+            <button class="btn" id = "answer2"></button>
+            <button class="btn" id = "answer3"></button>
+            <button class="btn" id = "answer4"></button>
+        </div>
     </section>
-    <section id="scorePage">
-
+    <section id="scoreP">
+        <h1>All Done!</h1>
+        <h2 id="score"></h2>
+        <label>Initals</label>
+        <input id = "name" type="text">
+        <input type="submit" value="summit">
+    </section>
+    <section id = "leaderBoard">
+        <h1>Highscores</h1>
+        <ol id="highScore"></ol>
+        <button>Go Back</button>
+        <button>Clear Highscores</button>
+    </section>
+    <section id="zero-timer">
+        <h1>Game over!</h1>
+        <button id="resart-game">Restart Game</button>
     </section>
     
 </body>

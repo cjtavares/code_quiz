@@ -7,10 +7,10 @@ var start = document.getElementById("startQuiz");
 start.addEventListener("click", showQuest1);
 start.addEventListener("click", hideStart);
 
-// var questionButton1 = document.getElementById("answer1");
-// var questionButton2 = document.getElementById("answer2");
-// var questionButton3 = document.getElementById("answer3");
-// var questionButton4 = document.getElementById("answer4");
+var questionButton1 = document.getElementById("answer1");
+var questionButton2 = document.getElementById("answer2");
+var questionButton3 = document.getElementById("answer3");
+var questionButton4 = document.getElementById("answer4");
 
 var answer1_2 = [false, false, false, false, false];
 var answer3 = [true, true, false, true, false];
@@ -18,13 +18,26 @@ var answer4 = [false, false, true, false, true];
 
 console.log(answer3[4])
 
-// function queryAnswer(answerNumber){
-//     if (answerNumber !== true){
-//     } else {
-//         secondsLeft -= 10;
-//     }
+var buttonContainer = document.querySelector(".button-container");
 
-// }
+buttonContainer.addEventListener("click", function(event) {
+    var element = event.target;
+    console.log(event.target)
+
+    if(element.matched(".btn")) {
+        var state = element.getAttibute("data-state")
+
+        if (state !== true) {
+            secondsLeft -= 10
+        } 
+    }
+});
+
+function queryAnswer(answerNumber){
+    if (!answerNumber){
+        secondsLeft -= 10;
+    }
+}
 
 // Code to hide the section with the opening page after start button is clicked
 function hideStart() {
@@ -56,6 +69,8 @@ var timer = setInterval(function() {
 }
 start.addEventListener("click", setTime);
 
+
+
 var question1 = {
     answer1: "Strings",
     answer2: "Booleans",
@@ -85,44 +100,44 @@ ans4.textContent = (question1.answer4);
 
 var question1Button1 = document.getElementById("answer1");
 question1Button1.addEventListener("click", showQuest2());
-question1Button1.addEventListener("click", function (){
-    if (answer1_2[0] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question1Button1.addEventListener("click", function (){
+//     if (answer1_2[0] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 
 var question1Button2 = document.getElementById("answer2");
-question1Button2.addEventListener("click", function (){
-    if (answer1_2[0] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question1Button2.addEventListener("click", function (){
+//     if (answer1_2[0] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question1Button2.addEventListener("click", showQuest2());
 
 
 var question1Button3 = document.getElementById("answer3");
-question1Button3.addEventListener("click", function (){
-    if (answer3[0] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question1Button3.addEventListener("click", function (){
+//     if (answer3[0] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question1Button3.addEventListener("click", showQuest2());
 
 
 var question1Button4 = document.getElementById("answer4");
-question1Button4.addEventListener("click", function (){
-    if (answer4[0] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question1Button4.addEventListener("click", function (){
+//     if (answer4[0] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question1Button4.addEventListener("click", showQuest2());
 }
 
@@ -150,46 +165,46 @@ ans4.textContent = (question2.answer4);
 
 
 var question2Button1 = document.getElementById("answer1");
-question2Button1.addEventListener("click", function (){
-    if (answer1_2[1] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question2Button1.addEventListener("click", function (){
+//     if (answer1_2[1] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question2Button1.addEventListener("click", showQuest3());
 
 
 var question2Button2 = document.getElementById("answer2");
-question2Button2.addEventListener("click", function (){
-    if (answer1_2[1] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question2Button2.addEventListener("click", function (){
+//     if (answer1_2[1] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question2Button2.addEventListener("click", showQuest3());
 
 
 var question2Button3 = document.getElementById("answer3");
-question2Button3.addEventListener("click", function (){
-    if (answer3[1] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question2Button3.addEventListener("click", function (){
+//     if (answer3[1] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question2Button3.addEventListener("click", showQuest3());
 
 
 var question2Button4 = document.getElementById("answer4");
-questionButton4.addEventListener("click", function (){
-    if (answer4[1] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// questionButton4.addEventListener("click", function (){
+//     if (answer4[1] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question2Button4.addEventListener("click", showQuest3());
 }
 
@@ -215,44 +230,44 @@ ans3.textContent = (question3.answer3);
 ans4.textContent = (question3.answer4);
 
 var question3Button1 = document.getElementById("answer1");
-question3Button1.addEventListener("click", function (){
-    if (answer1_2[2] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question3Button1.addEventListener("click", function (){
+//     if (answer1_2[2] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question3Button1.addEventListener("click", showQuest4());
 
 var question3Button2 = document.getElementById("answer2");
-question3Button2.addEventListener("click", function (){
-    if (answer1_2[2] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question3Button2.addEventListener("click", function (){
+//     if (answer1_2[2] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question3Button2.addEventListener("click", showQuest4());
 
 var question3Button3 = document.getElementById("answer3");
-question3Button3.addEventListener("click", function (){
-    if (answer3[2] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question3Button3.addEventListener("click", function (){
+//     if (answer3[2] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question3Button3.addEventListener("click", showQuest4());
 
 
 var question3Button4 = document.getElementById("answer4");
-question3Button4.addEventListener("click", function (){
-    if (answer4[2] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// question3Button4.addEventListener("click", function (){
+//     if (answer4[2] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question3Button4.addEventListener("click", showQuest4());
 }
 
@@ -278,44 +293,44 @@ ans3.textContent = (question4.answer3);
 ans4.textContent = (question4.answer4);
 
 var question4Button1 = document.getElementById("answer1");
-questionButton1.addEventListener("click", function (){
-    if (answer1_2[3] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// questionButton1.addEventListener("click", function (){
+//     if (answer1_2[3] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question4Button1.addEventListener("click", showQuest5());
 
 var question4Button2 = document.getElementById("answer2");
-questionButton2.addEventListener("click", function (){
-    if (answer1_2[3] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// questionButton2.addEventListener("click", function (){
+//     if (answer1_2[3] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question4Button2.addEventListener("click", showQuest5());
 
 var question4Button3 = document.getElementById("answer3");
-questionButton3.addEventListener("click", function (){
-    if (answer3[3] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// questionButton3.addEventListener("click", function (){
+//     if (answer3[3] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question4Button3.addEventListener("click", showQuest5());
 
 
 var question4Button4 = document.getElementById("answer4");
-questionButton4.addEventListener("click", function (){
-    if (answer4[3] === true){
-    } else {
-        secondsLeft -= 10;
-    }
+// questionButton4.addEventListener("click", function (){
+//     if (answer4[3] === true){
+//     } else {
+//         secondsLeft -= 10;
+//     }
 
-})
+// })
 question4Button4.addEventListener("click", showQuest5());
 }
 
@@ -324,7 +339,8 @@ var question5 = {
     answer1: "JavaScript",
     answer2: "Terminal/bash",
     answer3: "For loops",
-    answer4: "Consale log",
+    answer4: "Console log",
+    corretAnswer: "Console log",
 }
 
 var quest = document.getElementById("question");
@@ -356,7 +372,7 @@ function showQuest5 (){
 // var question5Button4 = document.getElementById("answer4");
 // question5Button4.addEventListener("click", queryAnswer(answer4[4]));
 // question5Button4.addEventListener("click", showQuest4());
-}
+// }
 
 function scorePage(){
     
