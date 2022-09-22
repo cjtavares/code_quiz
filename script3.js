@@ -122,20 +122,8 @@ var question2 = {
     answer4: "Squar brackets",  
    
  showQuest2: function (){
-var quest = document.getElementById("question");
-// var ans1 = document.getElementById("answer1");
-// var ans2 = document.getElementById("answer2");
-// var ans3 = document.getElementById("answer3");
-// var ans4 = document.getElementById("answer4");        
+var quest = document.getElementById("question");        
 quest.textContent = (questions[1]);
-// ans1.textContent = (question2.answer1);
-// ans2.textContent = (question2.answer2);
-// ans3.textContent = (question2.answer3);
-// ans4.textContent = (question2.answer4);
-// ans1.setAttribute("id", "q2a1")
-// ans2.setAttribute("id", "q2a2")
-// ans3.setAttribute("id", "q2a3")
-// ans4.setAttribute("id", "q2a4")
 
 var buttonContainer = document.querySelector(".button-container");
 buttonContainer.innerHTML="";
@@ -206,10 +194,7 @@ var question3 = {
     answer4: "All of the above",
  showQuest3: function (){
 var quest = document.getElementById("question");
-// var ans1 = document.getElementById("answer1");
-// var ans2 = document.getElementById("answer2");
-// var ans3 = document.getElementById("answer3");
-// var ans4 = document.getElementById("answer4");        
+     
 quest.textContent = (questions[2]);
 var buttonContainer = document.querySelector(".button-container");
 buttonContainer.innerHTML="";
@@ -279,10 +264,7 @@ var question4 = {
     answer4: "Parentheses",
     showQuest4: function showQuest4(){
 var quest = document.getElementById("question");
-// var ans1 = document.getElementById("answer1");
-// var ans2 = document.getElementById("answer2");
-// var ans3 = document.getElementById("answer3");
-// var ans4 = document.getElementById("answer4");        
+        
 quest.textContent = (questions[3]);
 var buttonContainer = document.querySelector(".button-container");
 buttonContainer.innerHTML="";
@@ -350,11 +332,7 @@ var question5 = {
     answer3: "For loops",
     answer4: "Consale log",
     showQuest5:function (){
-var quest = document.getElementById("question");
-// var ans1 = document.getElementById("answer1");
-// var ans2 = document.getElementById("answer2");
-// var ans3 = document.getElementById("answer3");
-// var ans4 = document.getElementById("answer4");        
+var quest = document.getElementById("question");        
 quest.textContent = (questions[4]);
 var buttonContainer = document.querySelector(".button-container");
 buttonContainer.innerHTML="";
@@ -420,7 +398,7 @@ question5Button4.addEventListener("click", clearInterval(timer));
 });
 }
 }
-
+// Pulling up score for quiz just finished 
 function scorePage(){
     
     
@@ -447,7 +425,7 @@ var score1 = localStorage.getItem("score1")
 console.log(score1)
 
 
-
+// setting scores to leader board
 var intInput = document.getElementById('name');
 var leaderBoard = document.querySelector("#highScore");
 var scores;
@@ -469,10 +447,10 @@ function renderScore(){
         leaderBoard.appendChild(li);
     }    
 }
-console.log(scores[0])
 
 
 
+// Savinf scores and Intitals to local storage
 var summitScore = document.getElementById("submit");
 var nameForm = document.querySelector("#scoreP");
 var nameInput = document.querySelector('#name');
@@ -489,7 +467,7 @@ summitScore.addEventListener("click", function(event) {
 
 
  localStorage.setItem("scores", JSON.stringify(scores));
-//  console.log(userScore.nameText);
+
 })
 
 summitScore.addEventListener("click", function(){
@@ -501,11 +479,14 @@ summitScore.addEventListener("click", function(){
     renderScore();
 })
 
+// Clear the leader board
 var clearScore = document.getElementById("clear-highscore");
 clearScore.addEventListener("click", function(){
     localStorage.clear();
     scores=[]
 })
 
-
-
+var restart = document.querySelector(".restart-game")
+restart.addEventListener("click", function(){ 
+    location.reload()
+})
