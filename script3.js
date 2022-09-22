@@ -448,11 +448,14 @@ console.log(score1)
 
 
 
-
-
-var intInput = document.getElementById('name')
+var intInput = document.getElementById('name');
 var leaderBoard = document.querySelector("#highScore");
-var scores = []
+var scores;
+if(localStorage.getItem("scores") === null){
+     scores = []
+} else{
+scores=JSON.parse(localStorage.getItem("scores"));
+}
 
 function renderScore(){
     leaderBoard.innerHTML = "";
@@ -461,65 +464,48 @@ function renderScore(){
         var enteredScore = scores[i];
 
         var li = document.createElement('li');
-        li.textContent = enteredScore;
+        li.textContent = enteredScore.userInit + " " + enteredScore.userScore;
         li.setAttribute("data-index", i);
         leaderBoard.appendChild(li);
     }    
 }
-console.log(scores)
-// function init() {
-//     // Get stored todos from localStorage
-//     var storedScores = JSON.parse(localStorage.getItem("scores"));
-  
-//     // If todos were retrieved from localStorage, update the todos array to it
-//     if (storedScores !== null) {
-//       scores = storedScores;
-//     }
-  
-//     // This is a helper function that will render todos to the DOM
-//     renderScore();
-//   }
-
-//   function storeScores() {
-//     // Stringify and set key in localStorage to todos array
-//     localStorage.setItem("scores", JSON.stringify(scores));
-//   }
-
-// var nameForm = document.querySelector("#scoreP")
-// var nameInput = document.querySelector('#name')
-//   nameForm.addEventListener("submit", function(event) {
-//     event.preventDefault();
-  
-//     var nameText = nameInput.value.trim();
-  
-//     // Return from function early if submitted todoText is blank
-//     if (nameText === "") {
-//       return;
-//     }
-  
-//     // Add new todoText to todos array, clear the input
-//     scores.push(todoText);
-//     nameInput.value = "";
-  
-//     // Store updated todos in localStorage, re-render the list
-//     storeScores();
-//     renderScore();
-//   });
+console.log(scores[0])
 
 
 
-// // Add click event to todoList element 
-// leaderBoard.addEventListener("click", function(event) {
-//     var element = event.target;
+var summitScore = document.getElementById("submit");
+var nameForm = document.querySelector("#scoreP");
+var nameInput = document.querySelector('#name');
+summitScore.addEventListener("click", function(event) {
+    event.preventDefault();
   
-//     // Checks if element is a button
-//     if (element.matches("button") === true) {
-//       // Get its data-index value and remove the todo element from the list
-//       var index = element.parentElement.getAttribute("data-index");
-//       todos.splice(index, 1);
-  
-//       // Store updated todos in localStorage, re-render the list
-//       storeScores();
-//       renderScore();
-//     }
-//   });
+    var nameText = nameInput.value.trim();
+    var userScore = {
+    userInit: nameText,
+    userScore: score1,
+  }
+
+ scores.push(userScore);
+
+
+ localStorage.setItem("scores", JSON.stringify(scores));
+//  console.log(userScore.nameText);
+})
+
+summitScore.addEventListener("click", function(){
+    renderScore();
+    var score = document.querySelector("#scoreP")
+    score.style.display = "none";
+    var showLeaderBoard = document.querySelector("#leaderBoard")
+    showLeaderBoard.style.display = "block";
+    renderScore();
+})
+
+var clearScore = document.getElementById("clear-highscore");
+clearScore.addEventListener("click", function(){
+    localStorage.clear();
+    scores=[]
+})
+
+
+

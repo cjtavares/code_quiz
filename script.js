@@ -13,7 +13,7 @@ var questions = [
             {text: "Alerts", correct: true},
             {text: "Numbers", correct: false}
         ]
-    }    
+    }       
 ]
 var secondsLeft = 75;
 var timeLeft = document.getElementById("timer");
@@ -64,10 +64,10 @@ function showQuest (){
         i++;
     } 
     
-// for (var i = 0; i < questions.length; i++){
-//     quest.textContent = questions[i];
-//     console.log(questions[i]);
-// }
+for (var i = 0; i < questions.length; i++){
+    quest.textContent = questions[i];
+    console.log(questions[i]);
+}
 }
 questionButton1.addEventListener("click", showQuest);
 questionButton2.addEventListener("click", showQuest);
